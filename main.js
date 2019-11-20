@@ -1,18 +1,22 @@
 const roomsMap = {
-  '315-Einstein': {
+  '315-einstein': {
     x: 72,
     y: 215
   },
-  '308-Heisenberg': {
+  '308-heisenberg': {
     x: 682,
     y: 70
+  },
+  '338-bohr': {
+    x: 573,
+    y: 82
   }
 };
 
 function locateRoom() {
   const room = document.getElementById('search').value;
   console.log(`--> Locating the room ${room}`);
-  const roomObj = roomsMap[Object.keys(roomsMap).find(key => key.includes(room))];
+  const roomObj = roomsMap[Object.keys(roomsMap).find(key => key.includes(room.toLowerCase()))];
   if (roomObj) {
     const roomEl = document.getElementsByClassName('room').item(0);
     roomEl.classList.remove('hide');
