@@ -10,14 +10,18 @@
   position: absolute;
 }
 
+.search-room {
+  width: 250px;
+  height: 20px;
+}
+
 .you-are-here {
   height: 1px;
   width: 1px;
   border: 4px solid orange;
-  position: relative;
-  top: 108px;
-  left: 495px;
+  position: absolute;
   background-color: orange;
+  color: orange;
 }
 
 .room {
