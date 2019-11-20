@@ -1,21 +1,24 @@
-function draw() {
-  let mapImage = document.getElementById('map');
-
-  console.log(`--> Image left: ${mapImage.offsetLeft} || top: ${mapImage.offsetTop}`);
-
-  console.log(`--> Image width: ${mapImage.offsetWidth} || height: ${mapImage.offsetHeight}`);
-
-  let navigationCanvas = document.getElementById('navigationCanvas');
-
-  navigationCanvas.style.position = 'absolute';
-  navigationCanvas.style.left = mapImage.offsetLeft + 'px';
-  navigationCanvas.style.top = mapImage.offsetTop + 'px';
-  navigationCanvas.style.width = mapImage.offsetWidth + 'px';
-  navigationCanvas.style.height = mapImage.offsetHeight + 'px';
-
-  let canvasCtx = navigationCanvas.getContext('2d');
-  canvasCtx.fillStyle = 'rgb(500, 200, 0)';
-  canvasCtx.fillRect(0, 0, 5, 5);
+const roomsMap = {
+  '315-Einstein': {
+    x: 72,
+    y: 215
+  },
+  '308-Heisenberg': {
+    x: 682,
+    y: 70
+  }
 }
 
-draw();
+
+function locateRoom() {
+  let urlParams = new URLSearchParams(window.location.search);
+  const room = urlParams.get('room');
+  console.log(`--> Locating the room ${room}`);
+  const roomKey = roomsMap[Object.keys(roomsMap).find(key => key.includes(room))];
+  console.log(`--> Room config: `, roomKey);
+  const roomEl = document.getElementsByClassName('room').item(0);
+  console.log(`--> roomEl: `, roomEl);
+  roomEl.classList.remove('hide');
+  roomEl.style.left = roomKey.x + 'px';
+  roomEl.style.top = roomKey.y + 'px';
+}
