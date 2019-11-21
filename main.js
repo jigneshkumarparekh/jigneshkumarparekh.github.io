@@ -1,16 +1,4 @@
 const roomsMap = {
-  '315-Einstein': {
-    x: 72,
-    y: 215
-  },
-  '308-Heisenberg': {
-    x: 682,
-    y: 70
-  },
-  '338-Bohr': {
-    x: 573,
-    y: 82
-  },
   '301-Pasteur': {
     x: 307,
     y: 378
@@ -18,6 +6,58 @@ const roomsMap = {
   '305-Feynman': {
     x: 715,
     y: 299
+  },
+  '306-Aristotle': {
+    x: 721,
+    y: 260
+  },
+  '307-Newton': {
+    x: 721,
+    y: 215
+  },
+  '308-Heisenberg': {
+    x: 682,
+    y: 70
+  },
+  '309-Ada': {
+    x: 720,
+    y: 75
+  },
+  '313-Archimedes': {
+    x: 315,
+    y: 530
+  },
+  '314-da Vinci': {
+    x: 306,
+    y: 471
+  },
+  '315-Einstein': {
+    x: 72,
+    y: 215
+  },
+  '335-Darwin': {
+    x: 72,
+    y: 155
+  },
+  '312-Curie': {
+    x: 217,
+    y: 95
+  },
+  '311-Galileo': {
+    x: 274,
+    y: 75
+  },
+  '338-Bohr': {
+    x: 573,
+    y: 82
+  },
+  '340-Hawking': {
+    x: 918,
+    y: 150
+  },
+  '341-Gauss': {
+    x: 928,
+    y: 208
   }
 };
 
